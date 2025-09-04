@@ -89,7 +89,7 @@ Restart the app after the change.
 
 ## Troubleshooting
 
-- “Database vektor tidak ditemukan … Jalankan ingest.py terlebih dahulu.”
+- “ERROR: Vector database not found … Jalankan ingest.py terlebih dahulu.”
   - Run the ingest step first: `python ingest.py --pdf <path-to.pdf> --index-path faiss_index`
 - FAISS install issues on Apple Silicon
   - Ensure you’re on a supported Python version; try a clean venv and `pip install -r requirements.txt` again.
@@ -114,7 +114,3 @@ uv pip install -r requirements.txt
 
 - `allow_dangerous_deserialization=True` is enabled when loading FAISS; this is necessary for local disk loading of saved indexes.
 - Chainlit files (`chainlit.md`, `chainlit.toml`) are present but unused in this Gradio-based demo.
-
-## License
-
-MIT (or your preferred license).
